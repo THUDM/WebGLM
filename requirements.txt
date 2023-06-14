@@ -1,0 +1,12 @@
+beautifulsoup4==4.11.2
+chardet==5.1.0
+datasets==2.12.0
+feedparser==6.0.10
+gradio==3.33.1
+HTMLParser==0.0.2
+playwright==1.26.0
+Requests==2.31.0
+rouge_score==0.1.2
+torch==1.12.1
+tqdm==4.65.0
+transformers==4.29.1
