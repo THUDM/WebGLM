@@ -171,5 +171,5 @@ if __name__ == "__main__":
     scheduler = WarmupLinearScheduler(opt, **scheduler_args)
     temp = args.temp
     
-    train(1, 40, 40, 40)
+    train(max_epoch=args.max_epoch, eval_step=args.eval_step, save_step=args.save_step, print_step=args.print_step)
 
