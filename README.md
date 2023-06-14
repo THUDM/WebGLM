@@ -1,6 +1,6 @@
 <h1>WebGLM: Towards An Efficient Web-enhanced Question Answering System with Human Preference</h1>
 
-<p align="center">[:page_with_curl: Paper (KDD 2023)](https://arxiv.org/pdf/2306.07906.pdf)</p>
+<p align="center">📃 <a href="https://arxiv.org/pdf/2306.07906.pdf" target="_blank">Paper (KDD 2023)</a>
 
 This is official implementation of WebGLM. And the table of contents is shown below.
 
