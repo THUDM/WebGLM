@@ -103,16 +103,33 @@ export WEBGLM_RETRIEVER_CKPT=./download/retriever-pretrained-checkpoint
 
 ## Run as Command Line Interface
 
+You can try WebGLM-2B model by:
+    
+```bash
+python cli_demo.py -w THUDM/WebGLM-2B
+```
+    
+Or directly for WebGLM-10B model:
+    
 ```bash
 python cli_demo.py
 ```
-
+    
+    
 ## Run as Web Service
 
+You can try WebGLM-2B model by:
+    
+```bash
+python web_demo.py -w THUDM/WebGLM-2B
+```
+    
+Or directly for WebGLM-10B model:
+    
 ```bash
 python web_demo.py
 ```
-
+    
 # Train WebGLM
 
 ## Train Generator
