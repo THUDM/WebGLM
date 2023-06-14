@@ -4,7 +4,11 @@
 
 This is official implementation of WebGLM. And the table of contents is shown below.
 
-https://github.com/THUDM/WebGLM/assets/129033897/1def0a04-cde0-4c50-ae3d-da044e6ed361
+
+
+https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf
+
+
 
 <!-- TOC -->
 
