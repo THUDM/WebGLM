@@ -2,7 +2,7 @@
 
 <p align="center">📃 <a href="https://arxiv.org/pdf/2306.07906.pdf" target="_blank">Paper (KDD 2023)</a> • 🌐 <a href="https://github.com/THUDM/WebGLM/blob/main/README_zh.md" target="_blank">中文 README</a></p>
 
-This is the official implementation of WebGLM.
+This is the official implementation of WebGLM. If you find our open-sourced efforts useful, please 🌟 the repo to encourage our following developement!
 
 https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf
 
