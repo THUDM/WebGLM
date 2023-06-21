@@ -1,6 +1,6 @@
 <h1>WebGLM: Towards An Efficient Web-enhanced Question Answering System with Human Preference</h1>
 
-<p align="center">📃 <a href="https://arxiv.org/pdf/2306.07906.pdf" target="_blank">Paper (KDD 2023)</a> • 🌐 <a href="https://github.com/THUDM/WebGLM/blob/main/README_zh.md" target="_blank">中文 README</a></p>
+<p align="center">📃 <a href="https://arxiv.org/pdf/2306.07906.pdf" target="_blank">Paper (KDD 2023)</a> • 🌐 <a href="https://github.com/THUDM/WebGLM/blob/main/README_zh.md" target="_blank">中文 README</a></p> • 🤗 HF Repo <a href="https://huggingface.co/THUDM/WebGLM" target="_blank">[WebGLM-10B]</a> <a href="https://huggingface.co/THUDM/WebGLM-2B" target="_blank">[WebGLM-2B]</a>
 
 This is the official implementation of WebGLM. If you find our open-sourced efforts useful, please 🌟 the repo to encourage our following developement!
 
