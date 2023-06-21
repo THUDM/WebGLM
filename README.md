@@ -179,6 +179,60 @@ and start running the experiment.
 
 [Here](assets/cases) you can see some examples of WebGLM real application scenarios.
 
+<details><summary><b>When will the COVID-19 disappear?</b></summary>
+
+![](assets/cases/0.png)
+
+</details>
+
+<details><summary><b>How to balance career and hobbies?</b></summary>
+
+![](assets/cases/1.png)
+
+</details>
+
+<details><summary><b>FL Studio and Cubase, which is better?</b></summary>
+
+![](assets/cases/2.png)
+
+</details>
+
+<details><summary><b>Is attention better than CNN?</b></summary>
+
+![](assets/cases/3.png)
+
+</details>
+
+<details><summary><b>How to survive in the first-tier cities without a high-salary work?</b></summary>
+
+![](assets/cases/4.png)
+
+</details>
+
+<details><summary><b>What do you think of version 3.5 of Genshin Impact?</b></summary>
+
+![](assets/cases/5.png)
+
+</details>
+
+<details><summary><b>transformers are originated in NLP, but why they can be applied in CV?</b></summary>
+
+![](assets/cases/6.png)
+
+</details>
+
+<details><summary><b>Who proposed Music Transformer? How does it work?</b></summary>
+
+![](assets/cases/7.png)
+
+</details>
+
+<details><summary><b>What is the backbone of Toolformer?</b></summary>
+
+![](assets/cases/8.png)
+
+</details>
+
 # Citation
 
 If you use this code for your research, please cite our paper.
