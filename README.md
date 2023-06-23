@@ -80,7 +80,7 @@ export SERPAPI_KEY="YOUR KEY"
 
 ## Prepare Retriever Checkpoint
 
-Download the checkpoint on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/54056861b2f34bbfb3f9/) by running the command line below.
+Download the checkpoint on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/bc96946dd9a14c84b8d4/) by running the command line below.
 
 You can manually specify the path to save the checkpoint by `--save SAVE_PATH`.
 
@@ -135,7 +135,7 @@ python web_demo.py
 
 ### Prepare Data
 
-Download the training data on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/ae204894f2e842f19a3f/) by running the command line below.
+Download the training data on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/d290dcfc92e342f9a017/) by running the command line below.
 
 ```bash
 python download.py generator-training-data
@@ -151,7 +151,7 @@ Please refer to [GLM repo](https://github.com/THUDM/GLM#train-with-your-own-data
 
 ### Prepare Data
 
-Download the training data on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/fa5e6eb1afac4f08a4c6/) by running the command line below.
+Download the training data on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/3927b67a834c475288e2/) by running the command line below.
 
 ```bash
 python download.py retriever-training-data
