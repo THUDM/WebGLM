@@ -83,6 +83,8 @@ Then, set the environment variable `SERPAPI_KEY` to your key.
 export SERPAPI_KEY="YOUR KEY"
 ```
 
+Alternatively, you can use Bing search with local browser environment (playwright). You can add `--search bing` to start command lines to use Bing search. (See [Run as Command Line Interface](#run-as-command-line-interface) and [Run as Web Service](#run-as-web-service))
+
 ## Prepare Retriever Checkpoint
 
 Download the checkpoint on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/bc96946dd9a14c84b8d4/) by running the command line below.
@@ -119,20 +121,19 @@ Or directly for WebGLM-10B model:
 python cli_demo.py
 ```
 
-If you want to
+If you want to use Bing search instead of SerpAPI, you can add `--search bing` to the command line, for example:
+
+```bash
+python cli_demo.py -w THUDM/WebGLM-2B --search bing
+```
 
 ## Run as Web Service
 
-You can try WebGLM-2B model by:
+Run `web_demo.py` with the same arguments as `cli_demo.py` to start a web service.
+For example, you can try WebGLM-2B model with Bing search by:
 
 ```bash
-python web_demo.py -w THUDM/WebGLM-2B
-```
-
-Or directly for WebGLM-10B model:
-
-```bash
-python web_demo.py
+python web_demo.py -w THUDM/WebGLM-2B --search bing
 ```
 
 # Train WebGLM
