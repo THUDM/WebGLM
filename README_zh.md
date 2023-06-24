@@ -73,7 +73,7 @@ playwright install
 
 然后将环境变量`SERPAPI_KEY`设置为你的密钥。
 
-或者，你可以通过 playwright 使用 Bing。你可以在 WebGLM 的启动命令行中添加 `--search bing` 以使用 Bing 搜索。
+或者，你可以通过 playwright 使用 Bing。你可以在 WebGLM 的启动命令行中添加 `--searcher bing` 以使用 Bing 搜索。
 
 ```bash
 export SERPAPI_KEY="YOUR KEY"
@@ -115,10 +115,10 @@ python cli_demo.py -w THUDM/WebGLM-2B
 python cli_demo.py
 ```
 
-如果你想使用 Bing 搜索而不是 SerpAPI，可以在命令行中添加 `--search bing`，例如：
+如果你想使用 Bing 搜索而不是 SerpAPI，可以在命令行中添加 `--searcher bing`，例如：
 
 ```bash
-python cli_demo.py -w THUDM/WebGLM-2B --search bing
+python cli_demo.py -w THUDM/WebGLM-2B --searcher bing
 ```
 
 ## 以 Web 服务形式运行
@@ -126,7 +126,7 @@ python cli_demo.py -w THUDM/WebGLM-2B --search bing
 使用与 `cli_demo.py` 相同的参数运行 `web_demo.py`。例如，你可以通过 Bing 搜索使用 WebGLM-2B 模型：
 
 ```bash
-python web_demo.py -w THUDM/WebGLM-2B --search bing
+python web_demo.py -w THUDM/WebGLM-2B --searcher bing
 ```
 
 # 训练 WebGLM
