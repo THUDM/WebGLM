@@ -3,9 +3,9 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 import re, os
 
 class WebGLM:
-    def __init__(self, webglm_ckpt_path, retriever_ckpt_path, device=None, filter_max_batch_size=400) -> None:
+    def __init__(self, webglm_ckpt_path, retriever_ckpt_path, device=None, filter_max_batch_size=400, searcher_name="serpapi") -> None:
         self.device = device
-        self.ref_retriever = ReferenceRetiever(retriever_ckpt_path, device, filter_max_batch_size)
+        self.ref_retriever = ReferenceRetiever(retriever_ckpt_path, device, filter_max_batch_size, searcher_name)
         self.tokenizer = AutoTokenizer.from_pretrained(webglm_ckpt_path, trust_remote_code=True)
         self.model = AutoModelForSeq2SeqLM.from_pretrained(webglm_ckpt_path, trust_remote_code=True)
         self.model = self.model.half()
@@ -63,7 +63,7 @@ def load_model(args):
     
     print('WebGLM Initializing...')
     
-    webglm = WebGLM(webglm_ckpt_path, retiever_ckpt_path, args.device, args.filter_max_batch_size)
+    webglm = WebGLM(webglm_ckpt_path, retiever_ckpt_path, args.device, args.filter_max_batch_size, args.searcher)
     
     print('WebGLM Loaded')
     

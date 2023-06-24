@@ -11,6 +11,7 @@ def add_model_config_args(parser):
     parser.add_argument("-b", "--filter_max_batch_size", type=int, default=50, help="max batch size for the retriever, default to 50")
     
     parser.add_argument("-s", "--serpapi_key", type=str, default=None, help="serpapi key for the searcher, default to $SERPAPI_KEY")
+    parser.add_argument("--searcher", type=str, default="serpapi", help="searcher to use (serpapi or bing), default to serpapi")
     
     return parser
 

@@ -6,13 +6,13 @@ This is the official implementation of WebGLM. If you find our open-sourced effo
 
 https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf
 
-*Read this in [中文](README_zh.md).*
-
+_Read this in [中文](README_zh.md)._
 
 <!-- TOC -->
 
 -   [Overview](#overview)
     -   [Features](#features)
+-   [News](#news)
 -   [Preparation](#preparation)
     -   [Prepare Code and Environments](#prepare-code-and-environments)
     -   [Prepare SerpAPI Key](#prepare-serpapi-key)
@@ -43,6 +43,11 @@ WebGLM aspires to provide an efficient and cost-effective web-enhanced question-
 -   **LLM-augmented Retriever**: Enhances the retrieval of relevant web content to better aid in answering questions accurately.
 -   **Bootstrapped Generator**: Generates human-like responses to questions, leveraging the power of the GLM to provide refined answers.
 -   **Human Preference-aware Scorer**: Estimates the quality of generated responses by prioritizing human preferences, ensuring the system produces useful and engaging content.
+
+# News
+
+-   **[2023-06-24]** We support searching via [Bing](https://www.bing.com/) now!
+-   **[2023-06-14]** We release our code and the [paper](https://arxiv.org/pdf/2306.07906.pdf) of WebGLM!
 
 # Preparation
 
@@ -103,32 +108,33 @@ export WEBGLM_RETRIEVER_CKPT=./download/retriever-pretrained-checkpoint
 ## Run as Command Line Interface
 
 You can try WebGLM-2B model by:
-    
+
 ```bash
 python cli_demo.py -w THUDM/WebGLM-2B
 ```
-    
+
 Or directly for WebGLM-10B model:
-    
+
 ```bash
 python cli_demo.py
 ```
-    
-    
+
+If you want to
+
 ## Run as Web Service
 
 You can try WebGLM-2B model by:
-    
+
 ```bash
 python web_demo.py -w THUDM/WebGLM-2B
 ```
-    
+
 Or directly for WebGLM-10B model:
-    
+
 ```bash
 python web_demo.py
 ```
-    
+
 # Train WebGLM
 
 ## Train Generator
