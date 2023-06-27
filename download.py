@@ -8,6 +8,7 @@ import json, argparse
 sess = requests.Session()
 
 def parse_args():
+    """ Parse arguments """
     parser = argparse.ArgumentParser()
     parser.add_argument('--link', '-l', type=str, required=True, help='Share link of Tsinghua Cloud')
     parser.add_argument('--password', '-p', type=str, default='', help='Password of the share link')
@@ -16,6 +17,7 @@ def parse_args():
     return parser.parse_args()
 
 def get_share_key(url):
+    """ Get share key from share link """
     prefix = 'https://cloud.tsinghua.edu.cn/d/'
     if not url.startswith(prefix):
         raise ValueError('Share link of Tsinghua Cloud should start with {}'.format(prefix))
@@ -26,6 +28,7 @@ def get_share_key(url):
         
     
 def dfs_search_files(share_key: str, path="/"):
+    """ DFS search all files in the share link """
     global sess
     filelist = []
     print('https://cloud.tsinghua.edu.cn/api/v2.1/share-links/{}/dirents/?path={}'.format(share_key, path))
@@ -40,6 +43,7 @@ def dfs_search_files(share_key: str, path="/"):
     return filelist
     
 def download_single_file(url: str, fname: str):
+    """ Download single file """
     global sess
     resp = sess.get(url, stream=True)
     total = int(resp.headers.get('content-length', 0))
@@ -58,6 +62,7 @@ def download_single_file(url: str, fname: str):
             bar.update(size)
 
 def download(url, save_dir):
+    """ Download all files in the share link """
     share_key = get_share_key(url)
     
     print("Searching for files to be downloaded...")
@@ -101,6 +106,7 @@ def download(url, save_dir):
     return flag
 
 def make_data(sample):
+    """ Make data for training """
     src = ""
     for ix, ref in enumerate(sample['references']):
         src += "Reference [%d]: %s\\" % (ix+1, ref)
