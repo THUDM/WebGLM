@@ -3,6 +3,7 @@ from .import playwright_based_crawl_new
 
 import asyncio
     
+from typing import List, Dict
 
 class Fetcher:
     def __init__(self) -> None:
@@ -10,7 +11,7 @@ class Fetcher:
         # TODO delete loop -> loop.close()
 
     
-    def _pre_handle_urls(self, urls: list[str]) -> list[str]:
+    def _pre_handle_urls(self, urls: List[str]) -> List[str]:
         urls_new = []
         for url in urls:
             if url in urls_new or "http://%s"%url in urls_new or "https://%s"%url in urls_new:
@@ -20,7 +21,7 @@ class Fetcher:
             urls_new.append(url)
         return urls_new
 
-    def fetch(self, urls: list[str]) -> dict[str, list[str]]:
+    def fetch(self, urls: List[str]) -> Dict[str, List[str]]:
         
         urls = self._pre_handle_urls(urls)
         

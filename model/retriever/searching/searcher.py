@@ -1,4 +1,5 @@
 import json
+from typing import List, Dict
 
 class SearchResult:
     def __init__(self, title, url, snip) -> None:
@@ -17,5 +18,5 @@ class SearchResult:
         return json.dumps(self.dump())
     
 class SearcherInterface:
-    def search(self, query) -> list[SearchResult]:
+    def search(self, query) -> List[SearchResult]:
         raise NotImplementedError()

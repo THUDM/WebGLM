@@ -18,7 +18,7 @@ class ContrieverScorer:
         assert max_batch_size > 0
         self.max_batch_size = max_batch_size
 
-    def get_query_embeddings(self, sentences: list[str]) -> torch.Tensor:
+    def get_query_embeddings(self, sentences: List[str]) -> torch.Tensor:
         # Tokenization and Inference
         torch.cuda.empty_cache()
         with torch.no_grad():
@@ -36,7 +36,7 @@ class ContrieverScorer:
                 dim=1) / mask.sum(dim=1)[..., None]
             return sentence_embeddings
     
-    def get_embeddings(self, sentences: list[str]) -> torch.Tensor:
+    def get_embeddings(self, sentences: List[str]) -> torch.Tensor:
         # Tokenization and Inference
         torch.cuda.empty_cache()
         with torch.no_grad():
@@ -54,12 +54,12 @@ class ContrieverScorer:
                 dim=1) / mask.sum(dim=1)[..., None]
             return sentence_embeddings
 
-    def score_documents_on_query(self, query: str, documents: list[str]) -> torch.Tensor:
+    def score_documents_on_query(self, query: str, documents: List[str]) -> torch.Tensor:
         query_embedding = self.get_query_embeddings([query])[0]
         document_embeddings = self.get_embeddings(documents)
         return query_embedding@document_embeddings.t()
 
-    def select_topk(self, query: str, documents: list[str], k=1):
+    def select_topk(self, query: str, documents: List[str], k=1):
         """
         Returns:
             `ret`: `torch.return_types.topk`, use `ret.values` or `ret.indices` to get value or index tensor

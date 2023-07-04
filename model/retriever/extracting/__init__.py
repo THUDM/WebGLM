@@ -1,6 +1,7 @@
 from .extracting_by_bs4 import extracting as bs4
 from .html2text import html2text
 
+from typing import List, Dict
 import re
 
 class Extractor:
@@ -22,8 +23,8 @@ class Extractor:
             ret.append(item)
         return ret
     
-    def extract_by_bs4(self, html) -> list[str]:
+    def extract_by_bs4(self, html) -> List[str]:
         return self._pre_filter(bs4(html))
     
-    def extract_by_html2text(self, html) -> list[str]:
+    def extract_by_html2text(self, html) -> List[str]:
         return self._pre_filter(html2text(html).split("\n"))

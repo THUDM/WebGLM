@@ -4,8 +4,9 @@ import multiprocessing
 import json
 import os
 import sys
+from typing import List, Dict
 
-def extracting(html: str) -> list[str]:
+def extracting(html: str) -> List[str]:
     html = html.replace("\n", " ")
     soup = BeautifulSoup(html, 'html.parser')
     raw = soup.find('body')

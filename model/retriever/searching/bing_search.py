@@ -59,7 +59,7 @@ class Searcher(SearcherInterface):
     def __init__(self) -> None:
         pass
 
-    def _parse(self, result) -> list[SearchResult]:
+    def _parse(self, result) -> List[SearchResult]:
         if not result:
             return None
         ret = []
@@ -67,7 +67,7 @@ class Searcher(SearcherInterface):
             ret.append(SearchResult(item['title'], item['url'], None))
         return ret
 
-    def search(self, query) -> list[SearchResult]:
+    def search(self, query) -> List[SearchResult]:
         return self._parse(query_bing(query))
 
 
