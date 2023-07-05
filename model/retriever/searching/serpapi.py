@@ -1,6 +1,7 @@
 import json, os
 import requests
 from .searcher import *
+from typing import List, Dict
 
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 if not SERPAPI_KEY:
@@ -28,7 +29,7 @@ def serp_api(query: str):
 
 
 
-def dump_results(results: list[SearchResult]):
+def dump_results(results: List[SearchResult]):
     return json.dumps([result.dump() for result in results])
 
 
@@ -36,7 +37,7 @@ class Searcher(SearcherInterface):
     def __init__(self) -> None:
         pass
 
-    def _parse(self, result) -> list[SearchResult]:
+    def _parse(self, result) -> List[SearchResult]:
         if not result:
             return None
         ret = []
@@ -44,5 +45,5 @@ class Searcher(SearcherInterface):
             ret.append(SearchResult(item['ref'], item['url'], item['snip']))
         return ret
 
-    def search(self, query) -> list[SearchResult]:
+    def search(self, query) -> List[SearchResult]:
         return serp_api(query)
