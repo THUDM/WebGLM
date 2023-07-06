@@ -2,19 +2,14 @@ import json, os
 import requests
 from .searcher import *
 from typing import List, Dict
-
-SERPAPI_KEY = os.getenv("SERPAPI_KEY")
-if not SERPAPI_KEY:
-    print("[Error] SERPAPI_KEY is not set, please set it to use serpapi")
-    exit(0)
     
 
 
-def serp_api(query: str):
+def serp_api(query: str, api_key: str):
     params = {
         "engine": "google",
         "q": query,
-        "api_key": SERPAPI_KEY
+        "api_key": api_key
     }
     resp = requests.get("https://serpapi.com/search", params=params)
     if resp.status_code != 200:
@@ -35,7 +30,10 @@ def dump_results(results: List[SearchResult]):
 
 class Searcher(SearcherInterface):
     def __init__(self) -> None:
-        pass
+        self.SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+        if not self.SERPAPI_KEY:
+            print("[Error] SERPAPI_KEY is not set, please set it to use serpapi")
+            exit(1)
 
     def _parse(self, result) -> List[SearchResult]:
         if not result:
@@ -46,4 +44,4 @@ class Searcher(SearcherInterface):
         return ret
 
     def search(self, query) -> List[SearchResult]:
-        return serp_api(query)
+        return serp_api(query, self.SERPAPI_KEY)
