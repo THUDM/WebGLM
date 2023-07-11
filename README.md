@@ -149,9 +149,9 @@ python web_demo.py -w THUDM/WebGLM-2B --searcher bing
 
 ## Train Generator
 
-### Prepare Data
+### Prepare Data (WebGLM-QA)
 
-Download the training data on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/d290dcfc92e342f9a017/) by running the command line below.
+Download the training data (WebGLM-QA) on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/d290dcfc92e342f9a017/) by running the command line below.
 
 ```bash
 python download.py generator-training-data
