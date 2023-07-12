@@ -249,6 +249,10 @@ and start running the experiment.
 
 </details>
 
+# License
+
+This repository is licensed under the [Apache-2.0 License](LICENSE). The use of model weights is subject to the [Model_License](MODEL_LICENSE)。All open-sourced data is for resarch purpose only.
+
 # Citation
 
 If you use this code for your research, please cite our paper.
