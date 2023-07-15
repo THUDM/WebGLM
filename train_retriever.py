@@ -8,7 +8,10 @@ from torch.optim import AdamW
 from torch.utils.data.distributed import DistributedSampler
 
 class QuestionReferenceDensity(torch.nn.Module):
+    """ Question Reference Density Model """
+
     def __init__(self) -> None:
+        """ Initialize the model """
         super().__init__()
         self.question_encoder = AutoModel.from_pretrained("facebook/contriever-msmarco")
         self.reference_encoder = AutoModel.from_pretrained("facebook/contriever-msmarco")
@@ -17,12 +20,14 @@ class QuestionReferenceDensity(torch.nn.Module):
         print("Number of parameter: %.2fM" % (total / 1e6))
     
     def mean_pooling(self, token_embeddings, mask):
+        """ Mean Pooling """
         token_embeddings = token_embeddings.masked_fill(~mask[..., None].bool(), 0.)
         sentence_embeddings = token_embeddings.sum(dim=1) / mask.sum(dim=1)[..., None]
         return sentence_embeddings
         
     
     def forward(self, question, pos, neg):
+        """ Forward """
         global args
         
         q = self.question_encoder(**question)
@@ -41,6 +46,7 @@ class QuestionReferenceDensity(torch.nn.Module):
         
     @staticmethod
     def loss(l_pos, l_neg):
+        """ Loss """
         return torch.nn.functional.cross_entropy(torch.cat([l_pos, l_neg], dim=1), torch.arange(0, len(l_pos), dtype=torch.long, device=args.device))
     
     @staticmethod
@@ -53,6 +59,7 @@ class QuestionReferenceDensity(torch.nn.Module):
 
 
 class WarmupLinearScheduler(torch.optim.lr_scheduler.LambdaLR):
+    """ Linear warmup and then linear decay. """
     def __init__(self, optimizer, warmup, total, ratio, last_epoch=-1):
         self.warmup = warmup
         self.total = total
@@ -104,6 +111,7 @@ def save(name):
     model.reference_encoder.save_pretrained(os.path.join(log_dir, name, "reference_encoder"))
 
 def train(max_epoch = 10, eval_step = 200, save_step = 400, print_step = 50):
+    """ Train the model """
     step = 0
     for epoch in range(0, max_epoch):
         print("EPOCH %d"%epoch)
