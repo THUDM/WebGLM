@@ -4,7 +4,11 @@
 
 This is the official implementation of WebGLM. If you find our open-sourced efforts useful, please 🌟 the repo to encourage our following developement!
 
-https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf
+<!--https://github.com/THUDM/WebGLM/assets/129033897/d2e1dd35-6340-4175-ac2d-fd585daa17cf-->
+
+**[Please click to watch the demo!]**
+
+[![Click to Watch Demo!](https://img.youtube.com/vi/ohjrlYCLLEU/0.jpg)](https://www.youtube.com/watch?v=ohjrlYCLLEU)
 
 _Read this in [中文](README_zh.md)._
 
