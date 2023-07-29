@@ -10,3 +10,4 @@ rouge_score==0.1.2
 torch==1.12.1
 tqdm==4.65.0
 transformers==4.29.1
+sentencepiece==0.1.99
