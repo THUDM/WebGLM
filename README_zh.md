@@ -63,6 +63,7 @@ apt install nodejs # 如果你使用Ubuntu
 
 ```bash
 playwright install
+playwright install-deps # 如果你使用Ubuntu
 ```
 
 如果你的主机中没有安装浏览器环境，则需要安装。不用担心，如果是这种情况，playwright 会在首次执行时出现说明。

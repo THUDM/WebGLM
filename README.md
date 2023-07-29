@@ -82,6 +82,7 @@ Install playwright dependencies.
 
 ```bash
 playwright install
+playwright install-deps # If you use Ubuntu
 ```
 
 If browsing environments are not installed in your host, you need to install them. Do not worry, playwright will give you instructions when you first execute it if so.
