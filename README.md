@@ -100,7 +100,7 @@ Alternatively, you can use Bing search with local browser environment (playwrigh
 
 ## Prepare Retriever Checkpoint
 
-Download the checkpoint on [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/bc96946dd9a14c84b8d4/) by running the command line below.
+Download the checkpoint on [ModelScope](https://www.modelscope.cn/models/shawliu9/webglm-contriever) by running the command line below.
 
 You can manually specify the path to save the checkpoint by `--save SAVE_PATH`.
 
