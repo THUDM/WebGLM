@@ -86,6 +86,7 @@ class DataUtils:
                     idc.append(idx)
                 if score > best_scr:
                     best_idx = idx
+                    best_scr = score
             if len(idc) == 0 and len(raw_citations[seg_idx]) > 0:
                 idc.append(best_idx)
             ideal_citations.append(idc)
