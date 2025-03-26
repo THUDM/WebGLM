@@ -39,7 +39,8 @@ ref_html = """
 
 """
 
-def query(query: str):    
+def query(query: str):
+    """ Query the model """
     
     refs = []
     answer = "Loading ..."
